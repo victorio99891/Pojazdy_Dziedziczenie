@@ -1,7 +1,7 @@
 using System;
 
 namespace KatalogPojazdow.Properties.pl.wiktor._abstract.pojazdy {
-    public class PojazdLadowy : Pojazd {
+    public abstract class PojazdLadowy : Pojazd {
         private int iloscKol;
 
 

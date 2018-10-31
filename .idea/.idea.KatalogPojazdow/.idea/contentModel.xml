@@ -18,6 +18,10 @@
             <e p="pojazdy_ladowe" t="Include">
               <e p="Rower.cs" t="Include" />
               <e p="Samochod.cs" t="Include" />
+              <e p="samochody" t="Include">
+                <e p="Audi.cs" t="Include" />
+                <e p="Mercedes.cs" t="Include" />
+              </e>
             </e>
             <e p="pojazdy_powietrzne" t="Include">
               <e p="Lotnia.cs" t="Include" />

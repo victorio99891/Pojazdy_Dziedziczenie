@@ -4,6 +4,7 @@ using System.IO;
 using KatalogPojazdow.Properties.pl.wiktor._abstract;
 using KatalogPojazdow.Properties.pl.wiktor._abstract.pojazdy;
 using KatalogPojazdow.Properties.pl.wiktor._abstract.pojazdy.pojazdy_ladowe;
+using KatalogPojazdow.Properties.pl.wiktor._abstract.pojazdy.pojazdy_ladowe.samochody;
 using KatalogPojazdow.Properties.pl.wiktor._abstract.pojazdy.pojazdy_powietrzne;
 using KatalogPojazdow.Properties.pl.wiktor._abstract.pojazdy.pojazdy_wodne;
 
@@ -21,6 +22,8 @@ namespace KatalogPojazdow {
             pojazdy.Add(new Samolot("silnik odrzutowy", 250, true, true, 10000, 45, 4));
             pojazdy.Add(new Zaglowka("na wiatr", 8, false, false, 1, 15));
             pojazdy.Add(new StatekPodwodny("silnik diesel", 20, true, false, 2, 1500));
+            pojazdy.Add(new Audi("silnik diesel", 2, true, true, 4, 6));
+            pojazdy.Add(new Mercedes("silnik benzynowy turbo", 5, true, true, 4, 8));
 
             Console.Clear();
 
@@ -79,6 +82,11 @@ namespace KatalogPojazdow {
                     }
 
                     break;
+                case 8:
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.WriteLine("\nDOSTEPNE MARKI SAMOCHODOW:\n");
+                    drukujPojazd(filtrowanieRodzajowPojazdow(pojazdy, 5));
+                    break;
                 case 9:
                     Environment.Exit(0);
                     break;
@@ -99,6 +107,7 @@ namespace KatalogPojazdow {
             Console.WriteLine("3 - Pokaz pojazdy wodne");
             Console.WriteLine("4 - Pokaz pojazdy powietrzne");
             Console.WriteLine("5 - Pokaz więcej szczegółów");
+            Console.WriteLine("8 - Pokaz dostepne marki samochodow");
             Console.WriteLine("9 - Wyjdź z apliakcji");
         }
 
@@ -106,7 +115,7 @@ namespace KatalogPojazdow {
             List<Pojazd> tmp = new List<Pojazd>();
             if (opcja == 2) {
                 foreach (var pojazd in pojazdy) {
-                    if (pojazd is PojazdLadowy) {
+                    if ((pojazd is PojazdLadowy) && !(pojazd is Audi) && !(pojazd is Mercedes)) {
                         tmp.Add(pojazd);
                     }
                 }
@@ -132,6 +141,14 @@ namespace KatalogPojazdow {
                 }
 
                 return tmp;
+            }
+
+            if (opcja == 5) {
+                foreach (var pojazd in pojazdy) {
+                    if (pojazd is Mercedes || pojazd is Audi) {
+                        tmp.Add(pojazd);
+                    }
+                }
             }
 
             return tmp;
@@ -247,6 +264,9 @@ namespace KatalogPojazdow {
                 Console.WriteLine();
                 Console.WriteLine("|                           - pojemność silnika to " + sam.PojemnoscSilnika +
                                   " litrów ");
+
+                Console.Write("|                           ");
+                sam.pokazDodatkoweMozliwosciSamochodu();
             }
 
             if (pojazd is StatekPodwodny) {
@@ -254,7 +274,8 @@ namespace KatalogPojazdow {
                 Console.Write("|                           - ");
                 sta.zanurzSie();
                 Console.WriteLine();
-                Console.WriteLine("|                           - maksymalne zanurzenie to " + sta.MaksymalnaGlebokosc +
+                Console.WriteLine("|                           - maksymalne zanurzenie to " +
+                                  sta.MaksymalnaGlebokosc +
                                   "m ");
             }
 

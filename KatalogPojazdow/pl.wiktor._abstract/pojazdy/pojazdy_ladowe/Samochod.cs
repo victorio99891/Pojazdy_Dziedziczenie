@@ -13,6 +13,10 @@ namespace KatalogPojazdow.Properties.pl.wiktor._abstract.pojazdy.pojazdy_ladowe 
             this.pojemnoscSilnika = pojemnoscSilnika;
         }
 
+        virtual public void pokazDodatkoweMozliwosciSamochodu() {
+            Console.WriteLine("(nieokreślony samochód nie ma dodatkowych właściwości)");
+        }
+
         public override void start() {
             Console.Write("wciskanie pedału gazu");
         }

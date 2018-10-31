@@ -1,7 +1,7 @@
 using System;
 
 namespace KatalogPojazdow.Properties.pl.wiktor._abstract.pojazdy {
-    public class PojazdPowietrzny : Pojazd {
+    public abstract class PojazdPowietrzny : Pojazd {
         private int wysokoscPrzelotowa;
         private int rozpietoscSkrzydel;
 

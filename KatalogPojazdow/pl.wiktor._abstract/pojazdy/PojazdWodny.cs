@@ -11,6 +11,14 @@ namespace KatalogPojazdow.Properties.pl.wiktor._abstract.pojazdy {
             GdzieSiePorusza = "po wodzie/pod wodą";
         }
 
+        public override void start() {
+            Console.WriteLine("Poruszaj się płynąc!");
+        }
+
+        public override void stop() {
+            Console.WriteLine("Zatrzymaj się zwalniając obroty silnika!");
+        }
+
         public int PoziomZanurzenia {
             get => poziomZanurzenia;
             set => poziomZanurzenia = value;

@@ -44,6 +44,8 @@
     <Compile Include="pl.wiktor._abstract\pojazdy\PojazdWodny.cs" />
     <Compile Include="pl.wiktor._abstract\pojazdy\pojazdy_ladowe\Rower.cs" />
     <Compile Include="pl.wiktor._abstract\pojazdy\pojazdy_ladowe\Samochod.cs" />
+    <Compile Include="pl.wiktor._abstract\pojazdy\pojazdy_ladowe\samochody\Audi.cs" />
+    <Compile Include="pl.wiktor._abstract\pojazdy\pojazdy_ladowe\samochody\Mercedes.cs" />
     <Compile Include="pl.wiktor._abstract\pojazdy\pojazdy_powietrzne\Lotnia.cs" />
     <Compile Include="pl.wiktor._abstract\pojazdy\pojazdy_powietrzne\Samolot.cs" />
     <Compile Include="pl.wiktor._abstract\pojazdy\pojazdy_wodne\StatekPodwodny.cs" />
