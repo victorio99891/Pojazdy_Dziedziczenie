@@ -4,3 +4,9 @@ C:\Users\Wiktor\RiderProjects\KatalogPojazdow\KatalogPojazdow\obj\Debug\KatalogP
 C:\Users\Wiktor\RiderProjects\KatalogPojazdow\KatalogPojazdow\obj\Debug\KatalogPojazdow.csproj.CoreCompileInputs.cache
 C:\Users\Wiktor\RiderProjects\KatalogPojazdow\KatalogPojazdow\obj\Debug\KatalogPojazdow.exe
 C:\Users\Wiktor\RiderProjects\KatalogPojazdow\KatalogPojazdow\obj\Debug\KatalogPojazdow.pdb
+C:\Users\Wiktor\RiderProjects\Pojazdy_Dziedziczenie\KatalogPojazdow\bin\Debug\KatalogPojazdow.exe
+C:\Users\Wiktor\RiderProjects\Pojazdy_Dziedziczenie\KatalogPojazdow\bin\Debug\KatalogPojazdow.pdb
+C:\Users\Wiktor\RiderProjects\Pojazdy_Dziedziczenie\KatalogPojazdow\obj\Debug\KatalogPojazdow.csprojAssemblyReference.cache
+C:\Users\Wiktor\RiderProjects\Pojazdy_Dziedziczenie\KatalogPojazdow\obj\Debug\KatalogPojazdow.csproj.CoreCompileInputs.cache
+C:\Users\Wiktor\RiderProjects\Pojazdy_Dziedziczenie\KatalogPojazdow\obj\Debug\KatalogPojazdow.exe
+C:\Users\Wiktor\RiderProjects\Pojazdy_Dziedziczenie\KatalogPojazdow\obj\Debug\KatalogPojazdow.pdb
