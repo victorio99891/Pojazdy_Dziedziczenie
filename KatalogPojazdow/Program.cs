@@ -18,12 +18,12 @@ namespace KatalogPojazdow {
             pojazdy.Clear();
             pojazdy.Add(new Rower("siła mięśni", 1, false, true, 2, 54));
             pojazdy.Add(new Samochod("silnik benzynowy", 5, true, true, 4, 5));
+            pojazdy.Add(new Audi("silnik diesel", 2, true, true, 4, 6));
+            pojazdy.Add(new Mercedes("silnik benzynowy turbo", 5, true, true, 4, 8));
             pojazdy.Add(new Lotnia("podmuch powietrza", 1, false, true, 300, 10, 150));
             pojazdy.Add(new Samolot("silnik odrzutowy", 250, true, true, 10000, 45, 4));
             pojazdy.Add(new Zaglowka("na wiatr", 8, false, false, 1, 15));
             pojazdy.Add(new StatekPodwodny("silnik diesel", 20, true, false, 2, 1500));
-            pojazdy.Add(new Audi("silnik diesel", 2, true, true, 4, 6));
-            pojazdy.Add(new Mercedes("silnik benzynowy turbo", 5, true, true, 4, 8));
 
             Console.Clear();
 
