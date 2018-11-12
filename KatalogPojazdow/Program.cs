@@ -28,6 +28,10 @@ namespace KatalogPojazdow {
             Console.Clear();
 
             drukujMenu();
+            obslugaProgramu();
+        }
+
+        private static void obslugaProgramu() {
             int input = int.Parse(Console.ReadLine());
 
             Console.Clear();
@@ -87,16 +91,29 @@ namespace KatalogPojazdow {
                     Console.WriteLine("\nDOSTEPNE MARKI SAMOCHODOW:\n");
                     drukujPojazd(filtrowanieRodzajowPojazdow(pojazdy, 5));
                     break;
+
+                case 10:
+                    FabrykaMercedesow fabrykaMercedes = new FabrykaMercedesow();
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    pojazdy.Add(fabrykaMercedes.stworzPojazd());
+                    Console.WriteLine("Stworzno nowego Mercedesa!");
+                    break;
+                case 11:
+                    FabrykaAudi fabrykaAudi = new FabrykaAudi();
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    pojazdy.Add(fabrykaAudi.stworzPojazd());
+                    Console.WriteLine("Stworzno nowego Audi!");
+                    break;
                 case 9:
                     Environment.Exit(0);
                     break;
             }
 
-            Console.ReadKey();
             Console.WriteLine("Wciśnij dowolny przycisk aby kontynuować...");
-
-
-            Main(args);
+            Console.ReadKey();
+            Console.Clear();
+            drukujMenu();
+            obslugaProgramu();
         }
 
 
@@ -108,6 +125,8 @@ namespace KatalogPojazdow {
             Console.WriteLine("4 - Pokaz pojazdy powietrzne");
             Console.WriteLine("5 - Pokaz więcej szczegółów");
             Console.WriteLine("8 - Pokaz dostepne marki samochodow");
+            Console.WriteLine("10 - Stwórz nowego Mercedesa");
+            Console.WriteLine("11 - Stwórz nowe Audi");
             Console.WriteLine("9 - Wyjdź z apliakcji");
         }
 

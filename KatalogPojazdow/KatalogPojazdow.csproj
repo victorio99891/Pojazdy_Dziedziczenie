@@ -38,6 +38,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FabrykaAudi.cs" />
+    <Compile Include="FabrykaPojazdow.cs" />
+    <Compile Include="FabrykaMercedesow.cs" />
     <Compile Include="pl.wiktor._abstract\Pojazd.cs" />
     <Compile Include="pl.wiktor._abstract\pojazdy\PojazdLadowy.cs" />
     <Compile Include="pl.wiktor._abstract\pojazdy\PojazdPowietrzny.cs" />
