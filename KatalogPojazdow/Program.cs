@@ -11,6 +11,7 @@ using KatalogPojazdow.Properties.pl.wiktor._abstract.pojazdy.pojazdy_wodne;
 namespace KatalogPojazdow {
     internal class Program {
         static List<Pojazd> pojazdy = new List<Pojazd>();
+        private static FabrykaPojazdow fabryka;
 
         public static void Main(string[] args) {
             Console.ForegroundColor = ConsoleColor.White;
@@ -93,15 +94,15 @@ namespace KatalogPojazdow {
                     break;
 
                 case 10:
-                    FabrykaMercedesow fabrykaMercedes = new FabrykaMercedesow();
+                    fabryka = new FabrykaMercedesow();
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    pojazdy.Add(fabrykaMercedes.stworzPojazd());
+                    pojazdy.Add(fabryka.stworzPojazd());
                     Console.WriteLine("Stworzno nowego Mercedesa!");
                     break;
                 case 11:
-                    FabrykaAudi fabrykaAudi = new FabrykaAudi();
+                    fabryka = new FabrykaAudi();
                     Console.ForegroundColor = ConsoleColor.Green;
-                    pojazdy.Add(fabrykaAudi.stworzPojazd());
+                    pojazdy.Add(fabryka.stworzPojazd());
                     Console.WriteLine("Stworzno nowego Audi!");
                     break;
                 case 9:
@@ -112,6 +113,7 @@ namespace KatalogPojazdow {
             Console.WriteLine("Wciśnij dowolny przycisk aby kontynuować...");
             Console.ReadKey();
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
             drukujMenu();
             obslugaProgramu();
         }
@@ -238,6 +240,7 @@ namespace KatalogPojazdow {
                 pojazd.stop();
                 Console.WriteLine();
                 Console.WriteLine("| Ilość osób na pokładzie: " + pojazd.IloscOsobNaPokladzie);
+                Console.WriteLine("|           Rodzaj napędu: " + pojazd.RodzajNapedu);
                 Console.WriteLine("|         Spalanie paliwa: " + zamienBoolNaString(pojazd.CzyUzywaPaliwo));
                 Console.WriteLine("|            Posiada koła: " + zamienBoolNaString(pojazd.CzyPosiadaKola));
                 Console.WriteLine("|    Dodatkowe informacje: ");
