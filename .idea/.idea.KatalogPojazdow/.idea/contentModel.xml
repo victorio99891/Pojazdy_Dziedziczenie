@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="C:\Users\Wiktor\.Rider2018.2\config\scratches" t="IncludeRecursive" />
     <e p="C:\Users\Wiktor\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Wiktor\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_KatalogPojazdow.694625931.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Wiktor\RiderProjects\Pojazdy_Dziedziczenie" t="IncludeFlat">
+    <e p="C:\Users\Wiktor\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_KatalogPojazdow.161414973.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Wiktor\RiderProjects\KatalogPojazdow" t="IncludeFlat">
       <e p="KatalogPojazdow" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="DelegatTworzenia.cs" t="Include" />
         <e p="FabrykaAudi.cs" t="Include" />
         <e p="FabrykaMercedesow.cs" t="Include" />
         <e p="FabrykaPojazdow.cs" t="Include" />

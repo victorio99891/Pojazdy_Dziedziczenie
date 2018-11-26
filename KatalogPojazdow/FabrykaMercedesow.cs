@@ -6,22 +6,30 @@ using KatalogPojazdow.Properties.pl.wiktor._abstract.pojazdy.pojazdy_ladowe.samo
 
 namespace KatalogPojazdow {
     public class FabrykaMercedesow : FabrykaPojazdow {
-        public Pojazd stworzPojazd() {
+        
+        private List<Pojazd> listaPojazdow;
+
+        public FabrykaMercedesow(List<Pojazd> lista) {
+            listaPojazdow = lista;
+        }
+
+
+        public void stworzPojazd() {
             Console.WriteLine("Witaj w Fabryce Mercedesow:");
-                                    Console.WriteLine("Podaj rodzaj napêdu samochodu: ");
-                                    string rodzajnapedu = Console.ReadLine();
-                                    Console.WriteLine("Podaj iloosobowy jest samochod: ");
-                                    int ileOsob = Int32.Parse(Console.ReadLine());
-                                    bool paliwo = true;
-                                    bool kola = true;
-                                    Console.WriteLine("Podaj iloœæ kó³:");
-                                    int iloscKol = Int32.Parse(Console.ReadLine());
-                                    Console.WriteLine("Podaj pojemnoœæ silnika: ");
-                                    int pojemnoscSilnika = Int32.Parse(Console.ReadLine());
-                        
-                                    Mercedes nowy = new Mercedes(rodzajnapedu, ileOsob, paliwo, kola, iloscKol, pojemnoscSilnika);
-                        
-                                    return nowy;
+            Console.WriteLine("Podaj rodzaj napêdu samochodu: ");
+            string rodzajnapedu = Console.ReadLine();
+            Console.WriteLine("Podaj iloosobowy jest samochod: ");
+            int ileOsob = Int32.Parse(Console.ReadLine());
+            bool paliwo = true;
+            bool kola = true;
+            Console.WriteLine("Podaj iloœæ kó³:");
+            int iloscKol = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj pojemnoœæ silnika: ");
+            int pojemnoscSilnika = Int32.Parse(Console.ReadLine());
+
+            Mercedes nowy = new Mercedes(rodzajnapedu, ileOsob, paliwo, kola, iloscKol, pojemnoscSilnika);
+
+            listaPojazdow.Add(nowy);
         }
     }
 }

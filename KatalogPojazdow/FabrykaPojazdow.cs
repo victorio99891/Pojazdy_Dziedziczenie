@@ -3,6 +3,6 @@ using KatalogPojazdow.Properties.pl.wiktor._abstract;
 
 namespace KatalogPojazdow {
     public interface FabrykaPojazdow {
-        Pojazd stworzPojazd();
+        void stworzPojazd();
     }
 }

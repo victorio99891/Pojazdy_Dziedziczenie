@@ -1,10 +1,18 @@
 using System;
+using System.Collections.Generic;
 using KatalogPojazdow.Properties.pl.wiktor._abstract;
 using KatalogPojazdow.Properties.pl.wiktor._abstract.pojazdy.pojazdy_ladowe.samochody;
 
 namespace KatalogPojazdow {
     public class FabrykaAudi : FabrykaPojazdow {
-        public Pojazd stworzPojazd() {
+        private List<Pojazd> listaPojazdow;
+
+        public FabrykaAudi(List<Pojazd> lista) {
+            listaPojazdow = lista;
+        }
+
+
+        public void stworzPojazd() {
             Console.WriteLine("Witaj w Fabryce Audi:");
             Console.WriteLine("Podaj rodzaj napêdu samochodu: ");
             string rodzajnapedu = Console.ReadLine();
@@ -19,7 +27,7 @@ namespace KatalogPojazdow {
 
             Audi nowy = new Audi(rodzajnapedu, ileOsob, paliwo, kola, iloscKol, pojemnoscSilnika);
 
-            return nowy;
+            listaPojazdow.Add(nowy);
         }
     }
 }

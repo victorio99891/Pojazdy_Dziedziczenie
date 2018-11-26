@@ -11,6 +11,8 @@ using KatalogPojazdow.Properties.pl.wiktor._abstract.pojazdy.pojazdy_wodne;
 namespace KatalogPojazdow {
     internal class Program {
         static List<Pojazd> pojazdy = new List<Pojazd>();
+        private static FabrykaPojazdow fabrykaPojazdow;
+        static DelegatTworzenia delegatTworzenia;
 
         public static void Main(string[] args) {
             Console.ForegroundColor = ConsoleColor.White;
@@ -30,6 +32,7 @@ namespace KatalogPojazdow {
             drukujMenu();
             obslugaProgramu();
         }
+
 
         private static void obslugaProgramu() {
             int input = int.Parse(Console.ReadLine());
@@ -93,15 +96,23 @@ namespace KatalogPojazdow {
                     break;
 
                 case 10:
-                    FabrykaMercedesow fabrykaMercedes = new FabrykaMercedesow();
+                    fabrykaPojazdow = new FabrykaMercedesow(pojazdy);
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    pojazdy.Add(fabrykaMercedes.stworzPojazd());
+                    delegatTworzenia = new DelegatTworzenia();
+                    delegatTworzenia.FabrykaDelegat -= delegatTworzenia.drukujStopke;
+                    delegatTworzenia.FabrykaDelegat += fabrykaPojazdow.stworzPojazd;
+                    delegatTworzenia.FabrykaDelegat += delegatTworzenia.drukujStopke;
+                    delegatTworzenia.FabrykaDelegat();
                     Console.WriteLine("Stworzno nowego Mercedesa!");
                     break;
                 case 11:
-                    FabrykaAudi fabrykaAudi = new FabrykaAudi();
+                    fabrykaPojazdow = new FabrykaAudi(pojazdy);
                     Console.ForegroundColor = ConsoleColor.Green;
-                    pojazdy.Add(fabrykaAudi.stworzPojazd());
+                    delegatTworzenia = new DelegatTworzenia();
+                    delegatTworzenia.FabrykaDelegat -= delegatTworzenia.drukujStopke;
+                    delegatTworzenia.FabrykaDelegat += fabrykaPojazdow.stworzPojazd;
+                    delegatTworzenia.FabrykaDelegat += delegatTworzenia.drukujStopke;
+                    delegatTworzenia.FabrykaDelegat();
                     Console.WriteLine("Stworzno nowego Audi!");
                     break;
                 case 9:

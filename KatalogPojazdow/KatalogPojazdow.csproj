@@ -38,6 +38,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DelegatTworzenia.cs" />
     <Compile Include="FabrykaAudi.cs" />
     <Compile Include="FabrykaPojazdow.cs" />
     <Compile Include="FabrykaMercedesow.cs" />
