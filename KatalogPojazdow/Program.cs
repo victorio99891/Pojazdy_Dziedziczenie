@@ -11,8 +11,12 @@ using KatalogPojazdow.Properties.pl.wiktor._abstract.pojazdy.pojazdy_wodne;
 namespace KatalogPojazdow {
     internal class Program {
         static List<Pojazd> pojazdy = new List<Pojazd>();
+<<<<<<< HEAD
         private static FabrykaPojazdow fabrykaPojazdow;
         static DelegatTworzenia delegatTworzenia;
+=======
+        private static FabrykaPojazdow fabryka;
+>>>>>>> a81982d66b2d884c8da96046922a06e28cb62f7c
 
         public static void Main(string[] args) {
             Console.ForegroundColor = ConsoleColor.White;
@@ -96,6 +100,7 @@ namespace KatalogPojazdow {
                     break;
 
                 case 10:
+<<<<<<< HEAD
                     fabrykaPojazdow = new FabrykaMercedesow(pojazdy);
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     delegatTworzenia = new DelegatTworzenia();
@@ -113,6 +118,17 @@ namespace KatalogPojazdow {
                     delegatTworzenia.FabrykaDelegat += fabrykaPojazdow.stworzPojazd;
                     delegatTworzenia.FabrykaDelegat += delegatTworzenia.drukujStopke;
                     delegatTworzenia.FabrykaDelegat();
+=======
+                    fabryka = new FabrykaMercedesow();
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    pojazdy.Add(fabryka.stworzPojazd());
+                    Console.WriteLine("Stworzno nowego Mercedesa!");
+                    break;
+                case 11:
+                    fabryka = new FabrykaAudi();
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    pojazdy.Add(fabryka.stworzPojazd());
+>>>>>>> a81982d66b2d884c8da96046922a06e28cb62f7c
                     Console.WriteLine("Stworzno nowego Audi!");
                     break;
                 case 9:
@@ -123,6 +139,7 @@ namespace KatalogPojazdow {
             Console.WriteLine("Wciśnij dowolny przycisk aby kontynuować...");
             Console.ReadKey();
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
             drukujMenu();
             obslugaProgramu();
         }
@@ -249,6 +266,7 @@ namespace KatalogPojazdow {
                 pojazd.stop();
                 Console.WriteLine();
                 Console.WriteLine("| Ilość osób na pokładzie: " + pojazd.IloscOsobNaPokladzie);
+                Console.WriteLine("|           Rodzaj napędu: " + pojazd.RodzajNapedu);
                 Console.WriteLine("|         Spalanie paliwa: " + zamienBoolNaString(pojazd.CzyUzywaPaliwo));
                 Console.WriteLine("|            Posiada koła: " + zamienBoolNaString(pojazd.CzyPosiadaKola));
                 Console.WriteLine("|    Dodatkowe informacje: ");
